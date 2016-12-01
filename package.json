@@ -1,0 +1,30 @@
+{
+  "name": "hoic",
+  "version": "0.0.0",
+  "description": "Hello intercooler.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/akubera/helloic"
+  },
+  "author": "andrew kubera",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "~1.12.4",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "^4.14.0",
+    "intercooler": "^1.0.3",
+    "jquery": "^3.1.1",
+    "livescript": "^1.5.0",
+    "livescript-middleware": "^1.1.2",
+    "logger": "0.0.1",
+    "morgan": "~1.5.3",
+    "pug": "^2.0.0-beta6",
+    "stylus": "^0.54.5"
+  }
+}
