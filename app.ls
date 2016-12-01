@@ -21,6 +21,7 @@ app
   ..use cookie-parser()
   ..use(express.static(path.join(__dirname, 'public')));
   ..use(express.static(path.join(__dirname, 'node_modules/intercooler/www/release')));
+  ..use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 
 app.get \/ (req, res, next) ->
   res.render('index', { title: 'Express' })
