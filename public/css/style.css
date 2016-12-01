@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+#output {
+  min-height: 200px;
+  background-color: lightgrey;
+}
