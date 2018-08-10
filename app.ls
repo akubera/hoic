@@ -28,17 +28,16 @@ app
     dest: as-local-dir('cache', 'public')
     bare: true
 
-  ..use(express.static(as-local-dir(\public)))
-  ..use(express.static(as-local-dir(\node_modules/intercooler/www/release)))
-  ..use(express.static(as-local-dir(\node_modules/jquery/dist)))
+  ..use express.static(as-local-dir(\public))
+  ..use express.static(as-local-dir(\node_modules/intercooler/www/release))
+  ..use express.static(as-local-dir(\node_modules/jquery/dist))
 
-app.use (req, res, next) ->
-
-  next()
-
+  ..use (req, res, next) ->
+    next()
 
 app.get \/ (req, res, next) ->
-  res.render('index', { title: 'Express' })
+  res.render \index do
+    title: 'Express'
 
 app.post \/click (req, res) ->
   console.log req.body
@@ -53,6 +52,6 @@ app.use (req, res, next) ->
 
 app.use (err, req, res, next) ->
   res.status(err.status || 500)
-  res.render('error', {
-        message: err.message,
-        error: err })
+  res.render \error do
+    message: err.message
+    error: err
