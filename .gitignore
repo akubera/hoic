@@ -10,6 +10,7 @@ config.yaml
 *.o
 *.mk
 
+package-lock.json
 node_modules
 
 cache
