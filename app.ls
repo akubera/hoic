@@ -6,7 +6,6 @@ require! {
     \morgan : logger
     \cookie-parser
     \body-parser
-
 }
 
 as-local-dir = (...args) -> path.join __dirname, ...args
@@ -14,10 +13,10 @@ as-local-dir = (...args) -> path.join __dirname, ...args
 
 module.exports = app = express()
 
-app.set('views', as-local-dir('views'));
-app.set('view engine', 'pug');
-
 app
+  ..set('views', as-local-dir('views'));
+  ..set('view engine', 'pug');
+
   ..use logger('dev')
   ..use body-parser.json()
   ..use body-parser.urlencoded({ extended: false })
